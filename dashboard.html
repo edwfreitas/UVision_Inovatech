@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UVision Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+</head>
+<body>
+<!-- Header Fixo -->
+<header class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="logo"></div>
+            <div>
+                <div class="header-title">UVision</div>
+                <div class="header-subtitle">Bem-vindo de volta!</div>
+            </div>
+        </div>
+        <button class="sync-btn">
+            <i class="feather icon-refresh-cw icon"></i>
+            <span class="text-xs">Sync</span>
+        </button>
+    </div>
+</header>
+
+<!-- Status do Dispositivo -->
+<div class="device-status">
+    <div class="device-status-left">
+        <i class="feather icon-bluetooth icon" style="color: #fdb813;"></i>
+        <span class="device-status-text">Pulseira Conectada</span>
+    </div>
+    <span class="badge badge-online">Online</span>
+</div>
+
+<!-- Conteúdo Principal -->
+<main class="main-content">
+    <div class="container">
+        <!-- Alert de Aviso (condicional) -->
+        <div class="alert section">
+            <i class="feather icon-alert-triangle icon"></i>
+            <span class="alert-text">Atenção! Você tem apenas 45 minutos de exposição segura restante.</span>
+        </div>
+
+        <!-- Card Índice UV Atual -->
+        <div class="uv-card section">
+            <div class="uv-header">
+                <div class="uv-title">Índice UV Atual</div>
+                <div class="uv-description">Atualizado há 2 minutos</div>
+            </div>
+            <div class="uv-content">
+                <div class="uv-left">
+                    <div class="uv-number">7</div>
+                    <span class="uv-badge">Alto</span>
+                    <div class="uv-safe-time">Tempo seguro: <span class="highlight">45 min</span></div>
+                </div>
+                <div class="uv-right">
+                    <i class="feather icon-sun icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid de Estatísticas -->
+        <div class="stats-grid section">
+            <div class="stat-card">
+                <div class="stat-description">Exposição Hoje</div>
+                <div class="stat-number">120</div>
+                <div class="stat-complement">min</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-description">Média Semanal</div>
+                <div class="stat-number">85</div>
+                <div class="stat-complement">min/dia</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-description">Alertas</div>
+                <div class="stat-number">3</div>
+                <div class="stat-complement">hoje</div>
+            </div>
+        </div>
+
+        <!-- Card Exposição por Hora -->
+        <div class="exposure-card section">
+            <div class="exposure-header">
+                <div>
+                    <div class="exposure-title">Exposição por Hora</div>
+                    <div class="exposure-description">Últimas 24 horas</div>
+                </div>
+                <button class="view-more-btn">Ver Mais</button>
+            </div>
+            <div class="hour-bar">
+                <div class="hour-label">08:00</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%;">36</div>
+                </div>
+            </div>
+            <div class="hour-bar">
+                <div class="hour-label">09:00</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%;">48</div>
+                </div>
+            </div>
+            <div class="hour-bar">
+                <div class="hour-label">10:00</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 40%;">24</div>
+                </div>
+            </div>
+            <!-- Adicione mais horas conforme necessário -->
+        </div>
+    </div>
+</main>
+
+<!-- Navegação Inferior -->
+<nav class="nav-bottom">
+    <div class="container">
+        <a href="#" class="nav-btn active">
+            <i class="feather icon-home icon"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-btn">
+            <i class="feather icon-bar-chart-2 icon"></i>
+            <span>Dados</span>
+        </a>
+        <a href="#" class="nav-btn">
+            <i class="feather icon-bell icon"></i>
+            <span>Alertas</span>
+        </a>
+        <a href="#" class="nav-btn">
+            <i class="feather icon-user icon"></i>
+            <span>Perfil</span>
+        </a>
+    </div>
+</nav>
+</body>
+</html>

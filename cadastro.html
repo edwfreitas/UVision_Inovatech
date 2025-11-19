@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>UVision - Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+        <img src="logo_uvision.png" alt="Logo do UVision">
+    </div>
+    <h2>Cadastro UVision</h2>
+    <form id="registerForm">
+        <!-- Dados pessoais -->
+        <input type="text" id="name" placeholder="Nome Completo" required>
+        <input type="text" id="email" placeholder="E-mail" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <input type="password" id="confirmPassword" placeholder="Confirmar Senha" required>
+
+        <!-- Informações de Pele -->
+        <div class="options">
+            <strong>Cor da Pele:</strong>
+            <label><input type="radio" name="skinColor" value="Branco" required> Branco</label>
+            <label><input type="radio" name="skinColor" value="Pardo"> Pardo</label>
+            <label><input type="radio" name="skinColor" value="Negro"> Negro</label>
+        </div>
+
+        <div class="options">
+            <strong>Condição na Pele:</strong>
+            <label><input type="radio" name="skinCondition" value="Nenhum" required> Nenhum</label>
+            <label><input type="radio" name="skinCondition" value="Albinismo"> Albinismo</label>
+            <label><input type="radio" name="skinCondition" value="Vitiligo"> Vitiligo</label>
+        </div>
+
+        <div id="pigmentationLevel" class="options hidden">
+            <strong>Nível de Pigmentação:</strong>
+            <label><input type="radio" name="pigmentation" value="25%"> 25% - Nível</label>
+            <label><input type="radio" name="pigmentation" value="50%"> 50% - Moderado</label>
+            <label><input type="radio" name="pigmentation" value="75%"> 75% - Extenso</label>
+            <label><input type="radio" name="pigmentation" value="100%"> 100% - Pele quase toda despigmentada</label>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <div class="secondary-links">
+        <a href="#">Já possui conta? Login</a>
+    </div>
+</div>
+<script src="cadastro.js"></script>
+</body>
+</html>
