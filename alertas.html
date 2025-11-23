@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UVision - Alertas e Configurações</title>
+    <link rel="stylesheet" href="alertas.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="logo_uvision_branco.png" alt="Logo" class="logo">
+                <div class="texts">
+                    <h1 class="title">Alertas</h1>
+                    <p class="subtitle">Notificações e configurações</p>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <div class="tabs">
+                <button class="tab active" data-tab="alertas">Alertas</button>
+                <button class="tab" data-tab="configuracoes">Configurações</button>
+            </div>
+            <div class="tab-content active" id="alertas">
+                <div class="summary-grid">
+                    <div class="summary-card critico">
+                        <div class="icon">⚠️</div>
+                        <div class="number">1</div>
+                        <div class="label">Crítico</div>
+                    </div>
+                    <div class="summary-card aviso">
+                        <div class="icon">⚠️</div>
+                        <div class="number">3</div>
+                        <div class="label">Aviso</div>
+                    </div>
+                    <div class="summary-card info">
+                        <div class="icon">✅</div>
+                        <div class="number">5</div>
+                        <div class="label">Info</div>
+                    </div>
+                </div>
+                <div class="recent-alerts-card">
+                    <div class="card-header">
+                        <h2>Alertas Recentes</h2>
+                        <p>Últimas 24 horas</p>
+                    </div>
+                    <div class="alerts-list">
+                        <div class="alert-item critico">
+                            <div class="alert-icon">⚠️</div>
+                            <div class="alert-content">
+                                <div class="alert-header">
+                                    <span class="alert-title">Limite Atingido</span>
+                                    <span class="badge">Novo</span>
+                                </div>
+                                <p class="alert-message">Sua exposição ao UV excedeu o limite diário.</p>
+                                <p class="timestamp">2 horas atrás</p>
+                            </div>
+                        </div>
+                        <div class="alert-item aviso">
+                            <div class="alert-icon">⚠️</div>
+                            <div class="alert-content">
+                                <div class="alert-header">
+                                    <span class="alert-title">Aviso de Exposição</span>
+                                    <span class="badge">Novo</span>
+                                </div>
+                                <p class="alert-message">Exposição prolongada detectada.</p>
+                                <p class="timestamp">4 horas atrás</p>
+                            </div>
+                        </div>
+                        <div class="alert-item info">
+                            <div class="alert-icon">✅</div>
+                            <div class="alert-content">
+                                <div class="alert-header">
+                                    <span class="alert-title">Dia Seguro</span>
+                                </div>
+                                <p class="alert-message">Nenhuma exposição excessiva hoje.</p>
+                                <p class="timestamp">6 horas atrás</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="configuracoes">
+                <div class="config-card">
+                    <h2>Notificações</h2>
+                    <div class="switch-item">
+                        <div class="switch-label">
+                            <span>Notificações Push</span>
+                            <p>Alertas em tempo real</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="config-card">
+                    <h2>Limites Personalizados</h2>
+                    <div class="slider-control">
+                        <div class="control-header">
+                            <span>Exposição Diária</span>
+                            <span class="value">45 min</span>
+                        </div>
+                        <input type="range" min="15" max="120" step="5" value="45" class="slider-input">
+                    </div>
+                    <div class="slider-control">
+                        <div class="control-header">
+                            <span>Limite UV</span>
+                            <span class="value">7</span>
+                        </div>
+                        <input type="range" min="1" max="11" step="1" value="7" class="slider-input uv">
+                    </div>
+                </div>
+                <div class="config-card">
+                    <h2>Pulseira</h2>
+                    <div class="status-alert connected">
+                        <span class="status-icon">📶</span>
+                        <span>Conectada</span>
+                    </div>
+                    <button class="bluetooth-btn">📶 Desconectar</button>
+                </div>
+            </div>
+        </main>
+        <nav class="bottom-nav">
+            <button class="nav-btn">🏠</button>
+            <button class="nav-btn active">🔔</button>
+            <button class="nav-btn">⚙️</button>
+            <button class="nav-btn">👤</button>
+        </nav>
+    </div>
+    <script src="alertas.js"></script>
+</body>
+</html>
