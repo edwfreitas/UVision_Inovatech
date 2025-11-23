@@ -9,7 +9,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #ffffff;
     min-height: 100vh;
-    padding-bottom: 80px; /* Espaço para navegação */
+    padding-bottom: 80px;
 }
 
 /* Classes de tamanho de fonte */
@@ -19,14 +19,12 @@ body {
 .text-xl { font-size: 1.25rem; }
 .text-5xl { font-size: 3rem; }
 
-/* Container centralizado */
 .container {
     max-width: 448px;
     margin: 0 auto;
     padding: 16px;
 }
 
-/* Header Fixo */
 .header {
     position: fixed;
     top: 0;
@@ -62,12 +60,12 @@ body {
 
 
 .header-title {
-    font-size: 1.125rem; /* lg */
+    font-size: 1.125rem;
     font-weight: bold;
 }
 
 .header-subtitle {
-    font-size: 0.75rem; /* xs */
+    font-size: 0.75rem;
     color: #7c8d9c;
 }
 
@@ -102,7 +100,7 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 8px;
-    margin-top: 16px; /* Espaçamento após header */
+    margin-top: 16px;
 }
 
 .device-status-left {
@@ -117,7 +115,7 @@ body {
 }
 
 .device-status-text {
-    font-size: 0.875rem; /* sm */
+    font-size: 0.875rem;
 }
 
 .badge {
@@ -139,7 +137,7 @@ body {
 
 /* Conteúdo Principal */
 .main-content {
-    padding-top: 80px; /* Espaço para header fixo */
+    padding-top: 80px;
 }
 
 .section {
@@ -214,7 +212,7 @@ body {
     border-radius: 12px;
     font-size: 0.75rem;
     color: white;
-    background-color: #dc3545; /* Vermelho para alto */
+    background-color: #dc3545;
 }
 
 .uv-safe-time {
