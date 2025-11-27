@@ -1,0 +1,144 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 448px;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto 16px auto;
+    object-fit: contain;
+}
+
+
+h2 {
+    font-size: 1.25rem;
+    color: #152e4c;
+    margin-bottom: 16px;
+}
+
+form {
+    margin-bottom: 16px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.options {
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.options strong {
+    display: block;
+    font-size: 0.875rem;
+    color: #152e4c;
+    margin-bottom: 8px;
+}
+
+.options label {
+    display: block;
+    font-size: 0.875rem;
+    color: #152e4c;
+    margin-bottom: 4px;
+}
+
+.options input[type="radio"] {
+    margin-right: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.alert {
+    background-color: rgba(253, 184, 19, 0.1);
+    border: 1px solid #fdb813;
+    border-radius: 4px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.bluetooth-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    color: #152e4c;
+}
+
+.alert-text {
+    font-size: 0.75rem;
+    color: #152e4c;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #152e4c;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0d1f33;
+}
+
+.secondary-links {
+    text-align: center;
+}
+
+.secondary-links a {
+    color: #152e4c;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.secondary-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 448px) {
+    .container {
+        padding: 16px;
+    }
+}

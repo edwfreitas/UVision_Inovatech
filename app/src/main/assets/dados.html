@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UVision - Dados UV</title>
+    <link rel="stylesheet" href="dados.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/recharts@2.1.9/umd/Recharts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="logo_uvision_branco.png" alt="UVision Logo" width="32" height="32">
+                </div>
+                <div class="header-text">
+                    <h1 class="title-lg">Dados UV</h1>
+                    <p class="subtitle-xs">Análise detalhada</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="card filters-card">
+                <div class="filters-content">
+                    <div class="filter-item">
+                        <label for="periodo" class="label-sm">Período</label>
+                        <select id="periodo" class="select">
+                            <option>Esta Semana</option>
+                            <option>Este Mês</option>
+                        </select>
+                    </div>
+                    <button class="export-btn">
+                        <i class="fas fa-download icon-16"></i>
+                        <span class="text-sm">Exportar PDF</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="card-header">
+                        <p class="description-xs">Exposição Total</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="number-2xl">305 min</p>
+                        <p class="comparison-xs">+8% vs anterior</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="card-header">
+                        <p class="description-xs">UV Médio</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="number-2xl">6.7</p>
+                        <p class="status-xs">Moderado</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs-container">
+                <div class="tabs-list">
+                    <button class="tab active" data-tab="exposicao">Exposição</button>
+                    <button class="tab" data-tab="indice">Índice UV</button>
+                </div>
+                <div class="tab-content">
+                    <div id="exposicao" class="tab-panel active">
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <h2 class="chart-title">Tempo de Exposição</h2>
+                                <p class="chart-description">Últimos 7 dias</p>
+                            </div>
+                            <div id="bar-chart" class="chart"></div>
+                        </div>
+                    </div>
+                    <div id="indice" class="tab-panel">
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <h2 class="chart-title">Índice UV Médio</h2>
+                                <p class="chart-description">Últimos 7 dias</p>
+                            </div>
+                            <div id="line-chart" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-card">
+                <div class="card-header">
+                    <h2 class="details-title">Informações Detalhadas</h2>
+                </div>
+                <div class="details-content">
+                    <div class="info-block">
+                        <div class="block-left">
+                            <p class="block-title">Tempo Seguro Médio</p>
+                            <p class="block-subtitle">Baseado no seu tipo de pele</p>
+                        </div>
+                        <p class="block-number">42 min</p>
+                    </div>
+                    <div class="info-block">
+                        <div class="block-left">
+                            <p class="block-title">Dias no Limite</p>
+                            <p class="block-subtitle">Últimos 7 dias</p>
+                        </div>
+                        <p class="block-number">5/7</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <div class="nav-content">
+                <button class="nav-btn">
+                    <i class="fas fa-home icon-20"></i>
+                    <span class="nav-text">Home</span>
+                </button>
+                <button class="nav-btn active">
+                    <i class="fas fa-chart-bar icon-20"></i>
+                    <span class="nav-text">Dados</span>
+                </button>
+                <button class="nav-btn">
+                    <i class="fas fa-bell icon-20"></i>
+                    <span class="nav-text">Alertas</span>
+                </button>
+                <button class="nav-btn">
+                    <i class="fas fa-user icon-20"></i>
+                    <span class="nav-text">Perfil</span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <script src="dados.js"></script>
+</body>
+</html>
